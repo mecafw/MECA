@@ -4,6 +4,8 @@ namespace Framework\Collections\ResponseCollection;
 
 class Response {
   
+  private static $responseCode = 200;
+
   /**
   * Generate page response by selected route
   *
@@ -19,11 +21,43 @@ class Response {
     * - complete Framework\Collections\RouteCollection\Route->with() system
     * - clean this code
     */
+
+    if(self::$responseCode != 200)
+      return self::manageErrorResponse();
+
     foreach ($GLOBALS['route']->_uriList as $key => $value) {
       if($value['uri'] === $path){
         return require_once $GLOBALS['base'] . '/Application/Views/' . $value['view'] . '.php';
       }
     }
+
+  }
+
+  /**
+  * Set response with code
+  *
+  * @param int $code
+  * @param string $path
+  * @return Framework\Collections\ResponseCollection\Response::generateResponse
+  */
+  public static function setCode($code, $path)
+  {
+
+    self::$responseCode = $code;
+    return self::generateResponse($path);
+
+  }
+
+  /**
+  * Send error response
+  * 
+  * @return response
+  */
+  public static function manageErrorResponse()
+  {
+
+      http_response_code(self::$responseCode);
+      return require_once $GLOBALS['base'] . '/Public/errors/' . self::$responseCode . '.php';
 
   }
 

@@ -9,7 +9,7 @@ class Request {
   /**
   * Process request and generate response
   *
-  * @return \Framework\Collections\ResponseCollection\Response
+  * @return \Framework\Collections\ResponseCollection\Response::generateResponse
   */
   public static function processRequest()
   {
@@ -19,22 +19,14 @@ class Request {
 
     foreach ($GLOBALS['route']->_uriList as $key) {
 
-      // Check if $path is in array
-      if(in_array($path, $key)){
-        // Generate our response by $path
+      if(in_array($path, $key))
         return \Framework\Collections\ResponseCollection\Response::generateResponse($path);
-    
-      }
 
     }
 
-    // If not exists, exit with 404 template
-    exit(require_once($GLOBALS['base'] . '/Public/404.php'));
+    // If not exists, exit with 404 status code
+    \Framework\Collections\ResponseCollection\Response::setCode(404, $path);
     
-
   }
-
-
-
 
 }

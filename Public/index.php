@@ -12,9 +12,9 @@ define('DEBUG', \Jelix\IniFile\Util::read(__DIR__ . '/../config.ini', true)->APP
 $GLOBALS['base'] = __DIR__ . '/../';
 
 if(DEBUG == 1){
-	$whoops = new Whoops\Run();
-	$whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
-	$whoops->register();  
+	$_Exceptions = new Whoops\Run();
+	$_Exceptions->pushHandler(new Whoops\Handler\PrettyPageHandler());
+	$_Exceptions->register();  
 } else {
 	error_reporting(0);
 }
@@ -23,4 +23,4 @@ require_once ($GLOBALS['base'] . '/Application/routes.php');
 $GLOBALS['route'] = $route;
 
 /* Set current request */
-\Framework\Collections\RequestCollection\Request::processRequest();
+return \Framework\Collections\RequestCollection\Request::processRequest();
