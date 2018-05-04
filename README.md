@@ -12,3 +12,8 @@
   - Install [MECA FRAMEWORK](https://github.com/mecafw/MECA)!
   - Learn some stuff with [DOCUMENTATION](https://docs.mecafw.me)!
   - Start building your app!
+## License
+MECA Framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+###### Stable version: 1.0.1
+###### © Copyright 2018 MECAFW
