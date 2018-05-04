@@ -7,6 +7,6 @@
     composer require filp/whoops
    ```
 ## INSTRUCTIONS
-  - Install [MECA FRAMEWORK](https://github.com/mecafw/MECA).
-  - Learn some stuff with [DOCUMENTATION](https://docs.mecafw.me).
+  - Install [MECA FRAMEWORK](https://github.com/mecafw/MECA)!
+  - Learn some stuff with [DOCUMENTATION](https://docs.mecafw.me)!
   - Start building your app!
