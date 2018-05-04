@@ -4,6 +4,6 @@ namespace \Application\Controllers;
 
 class Controller {
 
-	// ...
+  // ...
 
 }
