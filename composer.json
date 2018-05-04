@@ -1,0 +1,35 @@
+{
+    "name": "MECA",
+    "description": "MECA Framework",
+    "keywords": ["meca", "framework", "mf"],
+    "license": "MIT",
+    "author": "Nikolas Ferenčák",
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/", 
+            "Application\\": "Application/"
+        },
+        "files": [
+            "Framework/Helper.php"
+        ]
+    },
+    "repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "meca-framework",
+            "version": "1.0",
+            "source": {
+                "url": "https://github.com/WHISTIIKK/MECA",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }],
+    "require": {
+        "php": ">=5.6.4",
+        "meca-framework": "^1.0",
+        "filp/whoops": "^2.1",
+        "jelix/inifile": "^2.4"
+    }
+}

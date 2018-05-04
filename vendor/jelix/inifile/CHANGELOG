@@ -1,0 +1,48 @@
+Changelog
+
+2.4.0
+=====
+
+- new IniReader object, to read only files, to have "read only modifiers" in IniModifierArray
+- Exceptions are now Exceptions from the library, IniInvalidArgumentException and IniException
+- IniModifier does not require anymore an existing file, and can create a new
+  file with a given content.
+
+2.3.0
+=====
+
+- New IniModifierArray object. It allows to work on a list of IniModifier objects as the same time
+
+2.2.1
+=====
+
+- setValue accepts now an array as value
+
+2.2
+===
+
+- Fix `Util.mergeIniObjectContents()` and `Util::readAndMergeObject()`
+  about the merge of array values with integer keys.
+- New flags for these methods have been added to change the behavior of merge
+
+2.1
+===
+
+- Support of most of word characters in names
+- Support of associative arrays like
+
+```
+foo[mykey]=bar
+foo[otherkey]=baz
+```
+
+- fix merge of array values during import
+- fix renaming of array values
+
+
+2.0
+===
+
+- IniModifier and MultiInitModifier share the same interface
+- No more parameter '$onMaster' on methods. Replace by methods
+  named `<something>OnMaster()`.
