@@ -6,4 +6,4 @@
   - Models
   - Database system
   - Migration
-  - Artisan
+  - App manager
