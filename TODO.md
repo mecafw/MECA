@@ -5,3 +5,5 @@
   - Controllers
   - Models
   - Database system
+  - Migration
+  - Artisan
