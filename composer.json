@@ -1,9 +1,9 @@
 {
     "name": "MECA",
-    "description": "MECA Framework",
+    "description": "The MECA Framework!",
     "keywords": ["meca", "framework", "mf"],
     "license": "MIT",
-    "author": "Nikolas Ferenčák",
+    "author": "MECA TEAM",
     "autoload": {
         "psr-4": {
             "Framework\\": "Framework/", 
@@ -20,7 +20,7 @@
             "name": "meca-framework",
             "version": "1.0",
             "source": {
-                "url": "https://github.com/WHISTIIKK/MECA",
+                "url": "https://github.com/mecafw/MECA",
                 "type": "git",
                 "reference": "master"
             }
