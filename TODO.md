@@ -2,5 +2,6 @@
 <h1 align="center">TO-DO LIST</h1>
 <hr/><br/>
 
-## LIST
   - Controllers
+  - Models
+  - Database system
