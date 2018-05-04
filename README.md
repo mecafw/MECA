@@ -4,7 +4,7 @@
 
 ## INSTALLATION
    ```bash
-    composer require filp/whoops
+    composer require mecafw/MECA
    ```
 ## INSTRUCTIONS
   - Install [MECA FRAMEWORK](https://github.com/mecafw/MECA)!
