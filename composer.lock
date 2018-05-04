@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79a230eef3a86b6bd4d8020e2eab178d",
+    "content-hash": "b09263bf83241edf7752c3a8574ab0df",
     "packages": [
         {
             "name": "filp/whoops",
@@ -113,6 +113,16 @@
                 "ini"
             ],
             "time": "2018-02-12T17:45:24+00:00"
+        },
+        {
+            "name": "meca-framework",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mecafw/MECA",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "psr/log",
