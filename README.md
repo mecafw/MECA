@@ -5,7 +5,7 @@
 ## INSTALLATION
    ```bash
     apt-get install apache2 php5 mysql-server mysql-client phpmyadmin
-    git clone mecafw/MECA
+    git clone https://github.com/mecafw/MECA.git
     composer update
    ```
 ## INSTRUCTIONS
