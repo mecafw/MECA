@@ -7,3 +7,4 @@
   - Database system
   - Migration
   - App manager
+  - Query
