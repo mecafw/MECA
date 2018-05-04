@@ -19,12 +19,12 @@ class Request {
 
     foreach ($GLOBALS['route']->_uriList as $key) {
 
-      if(in_array($path, $key))
-        return \Framework\Collections\ResponseCollection\Response::generateResponse($path);
+      if(in_array($path, $key) || in_array(substr($path, 0, -1), $key))
+        return \Framework\Collections\ResponseCollection\Response::generateResponse((substr(trim($path), -1) == '/' && $path != '/') ? substr($path, 0, -1) : $path);
 
     }
 
-    // If not exists, exit with 404 status code
+    // Failed to find route? Exit with 404 status code
     \Framework\Collections\ResponseCollection\Response::setCode(404, $path);
     
   }

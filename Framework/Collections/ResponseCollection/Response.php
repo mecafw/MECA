@@ -25,9 +25,9 @@ class Response {
     if(self::$responseCode != 200)
       return self::manageErrorResponse();
 
-    foreach ($GLOBALS['route']->_uriList as $key => $value) {
-      if($value['uri'] === $path){
-        return require_once $GLOBALS['base'] . '/Application/Views/' . $value['view'] . '.php';
+    foreach ($GLOBALS['route']->_uriList as $key) {
+      if(in_array($path, $key)){
+        return require_once $GLOBALS['base'] . '/Application/Views/' . $key['view'] . '.php';
       }
     }
 
