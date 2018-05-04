@@ -4,7 +4,7 @@
 
 ## INSTALLATION
    ```bash
-    composer require mecafw/MECA
+    git clone mecafw/MECA
    ```
 ## INSTRUCTIONS
   - Install [MECA FRAMEWORK](https://github.com/mecafw/MECA)!
