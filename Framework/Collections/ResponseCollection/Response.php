@@ -18,17 +18,18 @@ class Response {
     /* 
     * TODO
     *
-    * - complete Framework\Collections\RouteCollection\Route->with() system
-    * - clean this code
+    * - complete Framework\Collections\RouteCollection\Route::with system
     */
 
     if(self::$responseCode != 200)
       return self::manageErrorResponse();
 
     foreach ($GLOBALS['route']->_uriList as $key) {
+
       if(in_array($path, $key)){
         return require_once $GLOBALS['base'] . '/Application/Views/' . $key['view'] . '.php';
       }
+
     }
 
   }

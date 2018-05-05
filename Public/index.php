@@ -12,15 +12,17 @@ define('DEBUG', \Jelix\IniFile\Util::read(__DIR__ . '/../config.ini', true)->APP
 $GLOBALS['base'] = __DIR__ . '/../';
 
 if(DEBUG == 1){
-	$_Exceptions = new Whoops\Run();
-	$_Exceptions->pushHandler(new Whoops\Handler\PrettyPageHandler());
-	$_Exceptions->register();  
+	$whoops  = new Whoops\Run();
+	$whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
+	$whoops->register();
+	  
+	echo '<pre>';
 } else {
 	error_reporting(0);
 }
 
-require_once ($GLOBALS['base'] . '/Application/routes.php');
+require_once $GLOBALS['base'] . '/Application/routes.php';
 $GLOBALS['route'] = $route;
 
 /* Set current request */
-return \Framework\Collections\RequestCollection\Request::processRequest();
+\Framework\Collections\RequestCollection\Request::process();

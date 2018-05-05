@@ -11,14 +11,13 @@ class Request {
   *
   * @return \Framework\Collections\ResponseCollection\Response::generateResponse
   */
-  public static function processRequest()
+  public static function process()
   {
 
     $path = isset($_GET['path']) ? explode('Public', $_GET['path'])[1] : '/';
     self::$_REQUEST_URI = $path;
-
     foreach ($GLOBALS['route']->_uriList as $key) {
-
+      print_r($GLOBALS['route']); exit();
       if(in_array($path, $key) || in_array(substr($path, 0, -1), $key))
         return \Framework\Collections\ResponseCollection\Response::generateResponse((substr(trim($path), -1) == '/' && $path != '/') ? substr($path, 0, -1) : $path);
 

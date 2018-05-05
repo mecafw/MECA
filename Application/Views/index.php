@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" type="image/png" href="/img/icon.png" />
   <title>MECA Framework</title>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css?ver=<?=time();?>">
 </head>
 <body>
   <div class="welcome">
