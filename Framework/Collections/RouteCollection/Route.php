@@ -4,9 +4,10 @@ namespace Framework\Collections\RouteCollection;
 
 class Route {
 
-  public $_uriList = [];
   private $_uriParams = [];
   private $lastRoute;
+  public $_uriList = [];
+  public $securePaths;
 
   /**
   * Create new route
@@ -27,12 +28,11 @@ class Route {
     $this->check($page);
 
     // Parse parameters using regex
-    preg_match_all("/(?<=\{(?!\*.)).+?(?=\})/", $route, $params['optional']);
-    preg_match_all("/(?<=\{\*).+?(?=\})/", $route, $params['required']);
+    preg_match_all("/(?<=\{(?!\*.)).+?(?=\})/", $route, $params['optional']); // {param|type}
+    preg_match_all("/(?<=\{\*).+?(?=\})/", $route, $params['required']);      // {*param|type}
 
     $this->_uriList[count($this->_uriList) + 1] = ['uri' => $route, 'view' => $page, 'with' => [], 'params' => $this->parseParams($params)];
     $this->lastRoute = $route;
-    
     return $this;
 
   }
@@ -45,11 +45,10 @@ class Route {
   * @param string $value
   * @return this
   */
-  public function with($propery, $value)
+  public function with($property, $value)
   {
 
-    $this->_uriList[count($this->_uriList)]['with'][] = ['propery' => $propery, 'value' => $value];
-
+    $this->_uriList[count($this->_uriList)]['with'][] = ['property' => $property, 'value' => $value];
     return $this;
 
   }
@@ -62,12 +61,10 @@ class Route {
   public function check($page)
   {
     
-    if(!file_exists( $GLOBALS['base'] . '/Application/Views/' . $page . '.php')){
+    if(!file_exists( $GLOBALS['base'] . '/Application/Views/' . $page . '.php'))
       throw new \RuntimeException("Fatal error! Cannot load {$page} route page!");
-    }
-    else{
+    else
       return true;
-    }
 
   }
 
@@ -80,13 +77,15 @@ class Route {
   public function parseParams($params)
   {
 
-    foreach ($params['optional'] as $key => $value) {
-      $this->_uriParams['optional'] = $value;
-    }
-    foreach ($params['required'] as $key => $value) {
-      $this->_uriParams['required'] = $value;
+    // TODO: Clean this code
+
+    for ($i=0;$i<count($params['optional'][0]);$i++) {
+      $this->_uriParams['optional'][$i]['param'] = explode('|', $params['optional'][0][$i])[0];
     }
 
+    for ($i=0;$i<count($params['required'][0]);$i++) {
+      $this->_uriParams['required'][$i]['param'] = explode('|', $params['required'][0][$i])[0];
+    }
     return $this->_uriParams;
 
   }

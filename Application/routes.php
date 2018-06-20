@@ -2,6 +2,10 @@
 /* Declare Route class */
 $route = new \Framework\Collections\RouteCollection\Route();
 
-$test = 'TEST';
+/* Secure paths against SQL injection */
+$route->securePaths = true;
+
 /* Create new routes */
-$route->view('/{*id}/{*user_name}/{permissions}', 'index')->with('suck', $test);
+$route->view('/', 'index');
+$route->view('/test', 'index');
+$route->view('/test/fuck/duck', 'index');

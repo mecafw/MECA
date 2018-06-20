@@ -26,9 +26,8 @@ class Response {
 
     foreach ($GLOBALS['route']->_uriList as $key) {
 
-      if(in_array($path, $key)){
+      if(in_array($path, $key))
         return require_once $GLOBALS['base'] . '/Application/Views/' . $key['view'] . '.php';
-      }
 
     }
 

@@ -3,7 +3,7 @@
     "description": "The MECA Framework!",
     "keywords": ["meca", "framework", "mf"],
     "license": "MIT",
-    "author": "MECA TEAM",
+    "author": "Nikolas Ferenčák",
     "autoload": {
         "psr-4": {
             "Framework\\": "Framework/", 
