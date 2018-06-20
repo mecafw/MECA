@@ -28,8 +28,8 @@ class Route {
     $this->check($page);
 
     // Parse parameters using regex
-    preg_match_all("/(?<=\{(?!\*.)).+?(?=\})/", $route, $params['optional']); // {param|type}
-    preg_match_all("/(?<=\{\*).+?(?=\})/", $route, $params['required']);      // {*param|type}
+    preg_match_all("/(?<=\{(?!\*.)).+?(?=\})/", $route, $params['optional']);
+    preg_match_all("/(?<=\{\*).+?(?=\})/", $route, $params['required']);
 
     $this->_uriList[count($this->_uriList) + 1] = ['uri' => $route, 'view' => $page, 'with' => [], 'params' => $this->parseParams($params)];
     $this->lastRoute = $route;

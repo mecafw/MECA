@@ -18,8 +18,9 @@ class Request {
     
     if($GLOBALS['route']->securePaths === true){
 
-    } else {
-      
+      if(strpos_arr(self::$_REQUEST_URI, ["'", ';', ',']))
+        return \Framework\Collections\ResponseCollection\Response::setCode(404, $path);
+
     }
 
     $elements = array_filter(explode('/', self::$_REQUEST_URI));
@@ -35,10 +36,10 @@ class Request {
       if(count($key) == count($elements)){ # We are looking for routes, which have same count of elements like our REQUEST_URI
         $same[] = $key;
        }
+
     }
 
-    print_r($same);
-    exit();
+
 
     /**
     * checkForParams($path); 

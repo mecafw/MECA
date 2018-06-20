@@ -7,5 +7,3 @@ $route->securePaths = true;
 
 /* Create new routes */
 $route->view('/', 'index');
-$route->view('/test', 'index');
-$route->view('/test/fuck/duck', 'index');

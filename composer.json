@@ -10,7 +10,8 @@
             "Application\\": "Application/"
         },
         "files": [
-            "Framework/Helper.php"
+            "Application/Functions.php",
+            "Framework/Functions.php" 
         ]
     },
     "require": {

@@ -1,141 +1,17 @@
 [
     {
-        "name": "bvanhoekelen/performance",
-        "version": "v2.3.5",
-        "version_normalized": "2.3.5.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/bvanhoekelen/performance.git",
-            "reference": "912fd76c1ce7f08305cdb23e7a783ae684117717"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/bvanhoekelen/performance/zipball/912fd76c1ce7f08305cdb23e7a783ae684117717",
-            "reference": "912fd76c1ce7f08305cdb23e7a783ae684117717",
-            "shasum": ""
-        },
-        "require": {
-            "bvanhoekelen/terminal-style": "^1.0",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "illuminate/database": "^5.4",
-            "illuminate/events": "^5.4",
-            "larapack/dd": "1.*",
-            "phpunit/phpunit": "^5.7"
-        },
-        "time": "2018-03-01T10:11:03+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Performance\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "B. van Hoekelen",
-                "homepage": "https://github.com/bvanhoekelen/performance"
-            }
-        ],
-        "description": "PHP performance tool analyser your script on time, memory usage and db query. Support Laravel and Composer for web, web console and command line interfaces.",
-        "keywords": [
-            "analyser",
-            "command line",
-            "compressor",
-            "database",
-            "database query log",
-            "export",
-            "laravel",
-            "memory",
-            "performance",
-            "performance tool",
-            "php",
-            "php performance analyser",
-            "php performance tool",
-            "php-performance",
-            "query",
-            "query analyser",
-            "query log",
-            "terminal",
-            "time",
-            "web"
-        ]
-    },
-    {
-        "name": "bvanhoekelen/terminal-style",
-        "version": "v1.0.4",
-        "version_normalized": "1.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/bvanhoekelen/terminal-style.git",
-            "reference": "e851be5b3c46f884be1096f9e01d3d5e90742194"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/bvanhoekelen/terminal-style/zipball/e851be5b3c46f884be1096f9e01d3d5e90742194",
-            "reference": "e851be5b3c46f884be1096f9e01d3d5e90742194",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "larapack/dd": "1.*",
-            "phpunit/phpunit": "^5.7"
-        },
-        "time": "2018-02-19T20:46:00+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "src/terminal-style.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "B. van Hoekelen",
-                "homepage": "https://github.com/bvanhoekelen/terminal-style"
-            }
-        ],
-        "description": "Return your terminal message in style! Change the text style, text color and text background color form the terminal interface with ANSI color codes. The terminal style tool support Laravel and Composer.",
-        "keywords": [
-            "8-bits background color",
-            "ANSI color codes",
-            "ansi",
-            "bash",
-            "colors",
-            "command line",
-            "command line colors",
-            "command line style",
-            "php",
-            "php terminal colors",
-            "php terminal style",
-            "terminal",
-            "terminal colors"
-        ]
-    },
-    {
         "name": "filp/whoops",
-        "version": "2.1.14",
-        "version_normalized": "2.1.14.0",
+        "version": "2.2.0",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/filp/whoops.git",
-            "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6"
+            "reference": "181c4502d8f34db7aed7bfe88d4f87875b8e947a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/filp/whoops/zipball/c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
-            "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
+            "url": "https://api.github.com/repos/filp/whoops/zipball/181c4502d8f34db7aed7bfe88d4f87875b8e947a",
+            "reference": "181c4502d8f34db7aed7bfe88d4f87875b8e947a",
             "shasum": ""
         },
         "require": {
@@ -143,19 +19,19 @@
             "psr/log": "^1.0.1"
         },
         "require-dev": {
-            "mockery/mockery": "0.9.*",
+            "mockery/mockery": "^0.9 || ^1.0",
             "phpunit/phpunit": "^4.8.35 || ^5.7",
-            "symfony/var-dumper": "^2.6 || ^3.0"
+            "symfony/var-dumper": "^2.6 || ^3.0 || ^4.0"
         },
         "suggest": {
             "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
             "whoops/soap": "Formats errors as SOAP responses"
         },
-        "time": "2017-11-23T18:22:44+00:00",
+        "time": "2018-03-03T17:56:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.0-dev"
+                "dev-master": "2.1-dev"
             }
         },
         "installation-source": "dist",
@@ -234,18 +110,6 @@
             "files",
             "ini"
         ]
-    },
-    {
-        "name": "meca-framework",
-        "version": "1.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mecafw/MECA",
-            "reference": "master"
-        },
-        "type": "library",
-        "installation-source": "source"
     },
     {
         "name": "psr/log",
