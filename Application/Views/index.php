@@ -12,6 +12,12 @@
     <h1 class="title">MECA Framework</h1>
   </div>
   <span class="meca-version">1.0.0</span>
-  <img src="/img/icon.png" class="hearth">
+  <img src="/img/icon.png" class="heart">
 </body>
 </html>
+
+<?php
+
+echo "POŘÁD TĚ BUDU MILOVAT! <3";
+
+?>

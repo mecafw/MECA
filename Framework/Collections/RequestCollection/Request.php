@@ -14,11 +14,12 @@ class Request {
   public static function process()
   {
 
+    $helper = new Functions();
     self::$_REQUEST_URI = isset($_GET['path']) ? explode('Public', $_GET['path'])[1] : '/';
     
     if($GLOBALS['route']->securePaths === true){
 
-      if(strpos_arr(self::$_REQUEST_URI, ["'", ';', ',']))
+      if($helper->fw_strpos(self::$_REQUEST_URI, ["'", ';', ',']))
         return \Framework\Collections\ResponseCollection\Response::setCode(404, $path);
 
     }
@@ -31,7 +32,7 @@ class Request {
       $uriListElements[] = array_filter(explode('/', $key['uri']));
     }
   
-    foreach ($uriListElements as $key) {
+    foreach($uriListElements as $key){
 
       if(count($key) == count($elements)){ # We are looking for routes, which have same count of elements like our REQUEST_URI
         $same[] = $key;

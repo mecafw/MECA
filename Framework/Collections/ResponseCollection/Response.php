@@ -23,7 +23,7 @@ class Response {
 
     if(self::$responseCode != 200)
       return self::manageErrorResponse();
-
+    
     foreach ($GLOBALS['route']->_uriList as $key) {
 
       if(in_array($path, $key))
