@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '6eaf1120dbb51f699282303de6a8d851' => $baseDir . '/Application/Functions.php',
-    'bc4a000b5f28f3cb014fcc2ab3c0bf07' => $baseDir . '/Framework/Functions.php',
+    'eb423dfb40870feeb7b13516956d7001' => $baseDir . '/Framework/Helper.php',
 );

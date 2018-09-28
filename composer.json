@@ -11,7 +11,7 @@
         },
         "files": [
             "Application/Functions.php",
-            "Framework/Functions.php" 
+            "Framework/Helper.php" 
         ]
     },
     "require": {

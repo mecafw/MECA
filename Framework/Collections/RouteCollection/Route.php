@@ -27,6 +27,7 @@ class Route {
     // Check if selected page exists
     $this->check($page);
 
+
     // Parse parameters using regex
     preg_match_all("/(?<=\{(?!\*.)).+?(?=\})/", $route, $params['optional']);
     preg_match_all("/(?<=\{\*).+?(?=\})/", $route, $params['required']);

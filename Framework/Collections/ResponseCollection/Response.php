@@ -20,7 +20,6 @@ class Response {
     *
     * - complete Framework\Collections\RouteCollection\Route::with system
     */
-
     if(self::$responseCode != 200)
       return self::manageErrorResponse();
     

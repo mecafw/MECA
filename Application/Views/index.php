@@ -15,9 +15,3 @@
   <img src="/img/icon.png" class="heart">
 </body>
 </html>
-
-<?php
-
-echo "POŘÁD TĚ BUDU MILOVAT! <3";
-
-?>
